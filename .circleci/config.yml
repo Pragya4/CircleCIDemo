@@ -40,7 +40,7 @@ workflows:
   schedule-workflow:
     triggers:
       - schedule:
-          cron: "30 2 * * 1-5"
+          cron: "35 14 * * 1-5"
           filters:
             branches:
               only:
