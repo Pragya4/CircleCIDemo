@@ -38,15 +38,17 @@ workflows:
     jobs:
       - build
   schedule-workflow:
-    triggers:
-      - schedule:
-        #only on weekdays whenever you push it'll be build and test
-          cron: "* * * * 1-5"
-          filters:
-            branches:
-              only:
-                - master
+    #triggers:
+    #  - schedule:
+    #    #only on weekdays whenever you push it'll be build and test
+    #      cron: "* * * * 1-5"
+    #      filters:
+    #        branches:
+    #         only:
+    #            - master
     jobs:
       - build
-      - test                
+      - test:
+          requires:
+            - build               
 
