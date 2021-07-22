@@ -37,15 +37,16 @@ workflows:
   simple-workflow-push: 
     jobs:
       - build
-  schedule-workflow:
-    #triggers:
-    #  - schedule:
-    #    #only on weekdays whenever you push it'll be build and test
-    #      cron: "* * * * 1-5"
-    #      filters:
-    #        branches:
-    #         only:
-    #            - master
+  #schedule-workflow:
+  #  triggers:
+  #    - schedule:
+        #only on weekdays whenever you push it'll be build and test
+  #        cron: "* * * * 1-5"
+  #        filters:
+  #          branches:
+  #            only:
+  #              - master
+  sequentail-workflow:
     jobs:
       - build
       - test:
